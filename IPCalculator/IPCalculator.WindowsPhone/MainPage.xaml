@@ -1,0 +1,88 @@
+﻿<Page
+    x:Class="IPCalculator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IPCalculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer VerticalScrollBarVisibility="Visible">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="0.2*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="0.2*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="0.2*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBox InputScope="Number" Margin="10,40,0,0" Grid.Column="0" Grid.Row="0" MaxLength="3" Name="firstOctet" TextChanged="TextBox_TextChanged" />
+        <TextBox InputScope="Number" Margin="5,40,0,0" Grid.Column="2" Grid.Row="0"  MaxLength="3" Name="secondOctet" TextChanged="TextBox_TextChanged" />
+        <TextBox InputScope="Number" Margin="5,40,5,0" Grid.Column="4" Grid.Row="0"  MaxLength="3" Name="thirdOctet" TextChanged="TextBox_TextChanged" />
+        <TextBox InputScope="Number" Margin="0,40,10,0" Grid.Column="6" Grid.Row="0"  MaxLength="3" Name="fourthOctet" TextChanged="TextBox_TextChanged" />
+        <ComboBox PickerFlyoutBase.Title="Choose CIDR" Header="Choose CIDR" Name="CBcidr" Margin="0,10,10,0" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="1" SelectionChanged="CBcidr_SelectionChanged" />
+        
+        <TextBlock FontWeight="Bold" VerticalAlignment="Bottom" FontSize="22" Margin="0,40,0,0" TextAlignment="Center" Grid.Column="1" Grid.Row="0" >.</TextBlock>
+        <TextBlock FontWeight="Bold" VerticalAlignment="Bottom" FontSize="22" Margin="0,40,0,0" TextAlignment="Center" Grid.Column="3" Grid.Row="0" >.</TextBlock>
+        <TextBlock FontWeight="Bold" VerticalAlignment="Bottom" FontSize="22" Margin="0,40,0,0" TextAlignment="Center" Grid.Column="5" Grid.Row="0" >.</TextBlock>
+
+        <TextBlock Padding="10,5,10,10" FontSize="20" FontWeight="Bold" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3">Network:</TextBlock>
+        <TextBlock Padding="10,10,10,10" FontSize="20" FontWeight="Bold" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="3">Netmask:</TextBlock>
+        <TextBlock Padding="10,10,10,10" FontSize="20" FontWeight="Bold" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="3">Start Host:</TextBlock>
+        <TextBlock Padding="10,10,10,10" FontSize="20" FontWeight="Bold" Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="3">End Host:</TextBlock>
+        <TextBlock Padding="10,10,10,10" FontSize="20" FontWeight="Bold" Grid.Column="0" Grid.Row="14" Grid.ColumnSpan="3">Addresses:</TextBlock>
+        <TextBlock Padding="10,10,10,10" FontSize="20" FontWeight="Bold" Grid.Column="0" Grid.Row="16" Grid.ColumnSpan="3">Broadcast:</TextBlock>
+        <TextBlock Padding="10,10,10,10" FontSize="20" FontWeight="Bold" Grid.Column="0" Grid.Row="19" Grid.ColumnSpan="3">Host Size:</TextBlock>
+        <TextBlock Padding="10,10,10,10" FontSize="20" FontWeight="Bold" Grid.Column="0" Grid.Row="21" Grid.ColumnSpan="3">Network Size:</TextBlock>
+
+            <TextBlock Margin="50,0,0,0" FontSize="14" FontWeight="Bold" Grid.Column="2" Grid.Row="3" Name="tbNetwork" Grid.ColumnSpan="5" />
+            <TextBlock Margin="50,0,0,0" FontSize="14" FontWeight="Bold" Grid.Column="2" Grid.Row="6" Name="tbNetmask" Grid.ColumnSpan="5" />
+            <TextBlock Margin="50,0,0,0" FontSize="14" FontWeight="Bold" Grid.Column="2" Grid.Row="9" Name="tbStartHost" Grid.ColumnSpan="5" />
+            <TextBlock Margin="50,0,0,0" FontSize="14" FontWeight="Bold" Grid.Column="2" Grid.Row="12" Name="tbEndHost" Grid.ColumnSpan="5" />
+            <TextBlock Margin="50,0,0,0" FontSize="14" FontWeight="Bold" Grid.Column="2" Grid.Row="15" Name="tbAddresses" Grid.ColumnSpan="5" />
+            <TextBlock Margin="50,0,0,0" FontSize="14" FontWeight="Bold" Grid.Column="2" Grid.Row="17" Name="tbBroadcast" Grid.ColumnSpan="5" />
+            <TextBlock Margin="50,0,0,0" FontSize="14" FontWeight="Bold" Grid.Column="2" Grid.Row="20" Name="tbHostSize" Grid.ColumnSpan="5" />
+            <TextBlock Margin="50,0,0,0" FontSize="14" FontWeight="Bold" Grid.Column="2" Grid.Row="22" Name="tbNetworkSize" Grid.ColumnSpan="5"/> 
+
+        <TextBlock  FontSize="14" FontWeight="Bold" Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="5" Name="tbNetworkBinary" /> 
+        <TextBlock  FontSize="14" FontWeight="Bold" Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="5" Name="tbNetmaskBinary" /> 
+        <TextBlock  FontSize="14" FontWeight="Bold" Grid.Column="2" Grid.Row="10" Grid.ColumnSpan="5" Name="tbStartHostBinary" /> 
+        <TextBlock  FontSize="14" FontWeight="Bold" Grid.Column="2" Grid.Row="13" Grid.ColumnSpan="5" Name="tbEndHostBinary" /> 
+        <TextBlock  FontSize="14" FontWeight="Bold" Grid.Column="2" Grid.Row="18" Grid.ColumnSpan="5" Name="tbBroadcastBinary" /> 
+
+    </Grid>
+    </ScrollViewer>
+</Page>
